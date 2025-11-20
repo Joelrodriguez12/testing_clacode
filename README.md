@@ -1,59 +1,111 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎨 Portfolio de Invitaciones - Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Portfolio de invitaciones web elegantes y modernas desarrollado con Laravel. Este proyecto muestra 5 diferentes tipos de invitaciones con diseños únicos y animaciones.
 
-## About Laravel
+## ✨ Características
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **5 Invitaciones Únicas**: Cada invitación tiene su propio diseño y tema
+- **Diseño Responsive**: Perfectas en cualquier dispositivo (móvil, tablet, desktop)
+- **Animaciones Suaves**: Transiciones y efectos visuales elegantes
+- **Sin Base de Datos**: Funcionan directamente sin configuración adicional
+- **Estilos Inline**: CSS integrado en cada plantilla para fácil personalización
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🎉 Tipos de Invitaciones
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 1. Cumpleaños Infantil 🎈
+Diseño colorido y divertido con tema de globos y celebración. Ideal para fiestas infantiles.
+- **Ruta**: `/invitations/birthday-kids`
+- **Colores**: Violeta, amarillo, rosa
+- **Estilo**: Divertido y energético
 
-## Learning Laravel
+### 2. Cumpleaños Elegante 🎉
+Invitación sofisticada para cumpleaños de adultos con estilo formal y elegante.
+- **Ruta**: `/invitations/birthday-adult`
+- **Colores**: Negro, dorado, blanco
+- **Estilo**: Elegante y profesional
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 3. Bautizo 🕊️
+Diseño celestial y tierno para celebrar el sacramento del bautismo.
+- **Ruta**: `/invitations/baptism`
+- **Colores**: Azul cielo, blanco, dorado
+- **Estilo**: Pacífico y espiritual
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 4. Quinceañera 👑
+Invitación de ensueño con tema de princesa para celebrar los 15 años.
+- **Ruta**: `/invitations/quinceanera`
+- **Colores**: Rosa, dorado, blanco
+- **Estilo**: Romántico y elegante
 
-## Laravel Sponsors
+### 5. Primera Comunión 🍷
+Diseño sagrado y especial para celebrar la primera comunión.
+- **Ruta**: `/invitations/religious-celebration`
+- **Colores**: Crema, dorado, marrón
+- **Estilo**: Tradicional y ceremonial
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🚀 Instalación
 
-### Premium Partners
+1. Clonar el repositorio
+2. Instalar dependencias de Composer:
+   ```bash
+   composer install
+   ```
+3. Copiar el archivo de configuración:
+   ```bash
+   cp .env.example .env
+   ```
+4. Generar la clave de aplicación:
+   ```bash
+   php artisan key:generate
+   ```
+5. Iniciar el servidor de desarrollo:
+   ```bash
+   php artisan serve
+   ```
+6. Abrir en el navegador: `http://localhost:8000`
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 📁 Estructura del Proyecto
 
-## Contributing
+```
+├── app/Http/Controllers/
+│   └── InvitationController.php    # Controlador principal
+├── resources/views/
+│   ├── portfolio/
+│   │   └── index.blade.php         # Página principal del portfolio
+│   └── invitations/
+│       ├── birthday-kids.blade.php
+│       ├── birthday-adult.blade.php
+│       ├── baptism.blade.php
+│       ├── quinceanera.blade.php
+│       └── religious-celebration.blade.php
+└── routes/
+    └── web.php                      # Rutas de la aplicación
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🎯 Rutas Disponibles
 
-## Code of Conduct
+- `/` - Portfolio principal con todas las invitaciones
+- `/invitations/birthday-kids` - Invitación de cumpleaños infantil
+- `/invitations/birthday-adult` - Invitación de cumpleaños elegante
+- `/invitations/baptism` - Invitación de bautizo
+- `/invitations/quinceanera` - Invitación de XV años
+- `/invitations/religious-celebration` - Invitación de primera comunión
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🛠️ Personalización
 
-## Security Vulnerabilities
+Cada invitación es fácil de personalizar:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Abre el archivo `.blade.php` correspondiente
+2. Modifica los datos (nombres, fechas, lugares)
+3. Ajusta los colores en la sección `<style>`
+4. Cambia los emojis según tu preferencia
 
-## License
+## 💻 Tecnologías
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- **Laravel**: Framework PHP moderno
+- **Blade**: Motor de plantillas de Laravel
+- **CSS3**: Estilos y animaciones
+- **HTML5**: Estructura semántica
+
+## 📝 Licencia
+
+Este proyecto está desarrollado con fines educativos y de demostración.
